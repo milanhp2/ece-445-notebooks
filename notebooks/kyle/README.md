@@ -62,6 +62,14 @@ I went through everything on our pcb schematic and made sure to order the parts 
 11-20-24
 We had our mock demo and most things went as planned. The load sensor was having a hard time picking up small increments of tea being added to the cup. I think the sesnor is just not built to handle such small increments or is dealing with noise.
 
+12-2-24
+I am back from thanksgiving break and most of the parts have arrived including the round 5 pcb. I am starting to solder so we can try switching over the machine to the pcb instead of the breadboard. I put a photo of the pcb round 5 and most of the parts being here finally in my folder.
+
+12-3-24
+Had a hard time getting the SMD order to finish the soldering yesterday. Today I was able to grab it and now I am finishing putting the quickflux onto the pcb and then going to put in oven
+
+12-4-24
+PCB from 12/3 was put in the oven too long and the testing didn't work. The pcb solderings seemed to be kinda burnt so I repeated the soldering process and tried to get the pcb ready before the demo later that afternoon. I was able to get the pcb soldered but my teammates weren't able to get any of it to work once they hooked up some of the other parts. So we did the demo with just the breadboard. In the future I would have ordered the parts much more in advance and worked harder to get our early pcb orders to being our final because the late round pcb orders didn't leave much time to get them done. We posted the extra credit video next to our project so the final prodcut can be viewed there.
 
 
 
