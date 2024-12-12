@@ -37,8 +37,23 @@ I redesigned the power schematic to connect the 12V connection straight to the m
 11-4-24
 I went to office hours to get some help on the power system design. I hadn't thought about how much strain was being put on the one 12V connector and how it could potentialy lead to errors down the road. Given that the power supply also has a 5V connection we decided to change the design so that the 12V connector only powers the motors. I also added a connector for the 5v which I then put through a 5V to 3.3V LDO which is less heat exchange then the previous design and only worries about powering the sesnors. I think this will be the power design we go with from this point forward. Here is the LDO I made on the PCB editor.
 
-11-5-25 
-Had to implement the new sensor circuit so the IR reciever worked properly after we noticed it in the datasheet. Fixed the errors in the PCB editor and submitted our fourth round pcb order. Picture of the implemented circuit is in my folder.
+11-5-24
+Had to implement the new sensor circuit so the IR reciever worked properly after we noticed it in the datasheet. Fixed the errors in the PCB editor and submitted our fourth round pcb order. Picture of the implemented circuit is in my folder. https://github.com/milanpatel9/ece-445-notebooks/blob/main/notebooks/kyle/IR%20sensor%20reciever%20circuit.jpg?raw=true![image](https://github.com/user-attachments/assets/19b3523f-21ae-4bcf-87ea-cf215470d468)
+
+11-7-24
+Refined the requirements and verifications for the power subsystem. Requirement:Must be able to supply 12 plus or minus 0.5V to the dispensing subsystem.
+Verification:Assemble the dispensing unit and hook up the power supply (wall connection, Use a multimeter to measure the voltage across the buck converter connected to the dispensing components,Ensure the voltage readings are correct by checking that they are within the range of 12 plus or minus 0.5V.
+Requirement: Must be able to supply 5 plus or minus 0.5V to the microcontroller, which will then convert it to 3.3 plus or minus 0.5V for the temperature, humidity, IR, and load sensors.
+Verification: Assemble the dispensing unit and plug in the power supply (wall connection) 12V, 5V, and ground to separate rails.
+Use a multimeter to measure the voltage across the 12V input and ground that is being delivered to the dispensing subsystem.
+Repeat the previous step but measure the voltage across the 5V input and ground that is being delivered to the microcontroller.
+Check individual sensors for each subsystem and ensure that they are receiving 3.3V across the output from the microcontroller and ground.
+
+11-11-24
+
+
+
+
 
 
 
