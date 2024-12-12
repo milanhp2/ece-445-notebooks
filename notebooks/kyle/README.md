@@ -58,7 +58,8 @@ I submitted our PCB for round 5, I changed how a few of the components are conne
 I joined my teammate in testing the motor verifications so we would be ready to the mock demo. Dispensing subsystem supply: Expected = 12V, Actual = 12.04V (Within 0.5V), Control subsbystem supply: Expected = 5V, Actual = 5.03V (Witihin 0.5V), Sensors supple: Expected = 3.3V, Actual = 3.293V (Within 0.5V). Overall the power supply seemed to be working perfectly on the breadboard. Now that we got everything on the breadboard working we have confirmed that PCB 4 and 5 are the only ones that might work based on how their designed and our test results. Need to get parts ordered soon
 
 11-19-24
-I went through everything on our pcb schematic and made sure to order the parts that we needed. Also verified they fit the footprint size. I made one order for a bunch of parts on digikey and then also placed an SMD order to the ECE supply shop.
+I went through everything on our pcb schematic and made sure to order the parts that we needed. Also verified they fit the footprint size. I made one order for a bunch of parts on digikey and then also placed an SMD order to the ECE supply shop. Also helped out with the testing for the dispensing system since the last time we ran our tests on it. Here are the results [
+](https://github.com/milanpatel9/ece-445-notebooks/blob/main/notebooks/kyle/Test%20results%20dispensing.png?raw=true)![image](https://github.com/user-attachments/assets/18ba354b-1a72-4f2b-8fb1-eb83b5e8a414)
 11-20-24
 We had our mock demo and most things went as planned. The load sensor was having a hard time picking up small increments of tea being added to the cup. I think the sesnor is just not built to handle such small increments or is dealing with noise.
 
