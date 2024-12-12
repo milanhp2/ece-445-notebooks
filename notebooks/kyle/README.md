@@ -26,6 +26,9 @@ I worked on the PCB sechematic again today adding an LED light and a solderjumpe
 I got the errors to go away on the PCB editor, had to learn how to use ground vias to hook up all the pin connections since we use the majority of ours on the ESP32. Still just have one of each component since we will just use this one for testing.
 
 10-21-24
+Submitted our pcb to be ordered. Afterwards our team met up together and tested the motors that were ordered. Testing raised questions about if 5V will be enough because they seemed to struggle when tested with 5V but performed well at higher voltages. We will need to either fix the firction around the motor compartnat or switch how we power the motor.
+
+10-
 
 
 
