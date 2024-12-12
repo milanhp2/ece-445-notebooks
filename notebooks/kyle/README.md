@@ -26,9 +26,10 @@ I worked on the PCB sechematic again today adding an LED light and a solderjumpe
 I got the errors to go away on the PCB editor, had to learn how to use ground vias to hook up all the pin connections since we use the majority of ours on the ESP32. Still just have one of each component since we will just use this one for testing.
 
 10-21-24
-Submitted our pcb to be ordered. Afterwards our team met up together and tested the motors that were ordered. Testing raised questions about if 5V will be enough because they seemed to struggle when tested with 5V but performed well at higher voltages. We will need to either fix the firction around the motor compartnat or switch how we power the motor.
+Submitted our pcb to be ordered. Afterwards our team met up together and tested the motors that were ordered. Testing raised questions about if 5V will be enough because they seemed to struggle when tested with 5V but performed well at higher voltages. The current seems to be pretty high already with 5V so will now need to chekc all the data sheets to see if they can handle this. 750mA was a common numnber of amps we got.
 
-10-
+10-26-24
+We got part of the machine back from the shop, The motors being installed this time we tested again for functiality. Friction was a major issue and the motors couldnt even move at 5V. We will need to either fix the firction around the motor compartment or switch how we power the motor. 9V the motors began to spin. We are going to round up to 12V for the extra torque and use all the sensors at 3.3V after testing. This is because we will need to change the power schmatic to account for the motors needing more so we will need to limit how many times we are stepping down.
 
 
 
