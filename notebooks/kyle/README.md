@@ -31,5 +31,10 @@ Submitted our pcb to be ordered. Afterwards our team met up together and tested 
 10-26-24
 We got part of the machine back from the shop, The motors being installed this time we tested again for functiality. Friction was a major issue and the motors couldnt even move at 5V. We will need to either fix the firction around the motor compartment or switch how we power the motor. 9V the motors began to spin. We are going to round up to 12V for the extra torque and use all the sensors at 3.3V after testing. This is because we will need to change the power schmatic to account for the motors needing more so we will need to limit how many times we are stepping down.
 
+10-30-24
+I redesigned the power schematic to connect the 12V connection straight to the motors to fix our friction problem and then chnaged the LDO to a 12V to 3.3V component since we no longer needed 5V. I then transfered these changes onto the pcb editor. Digikey MIC5504-1.8YM5-TR should be able to handle the current going through it but I am still trying to find one that handles more.
+
+
+
 
 
