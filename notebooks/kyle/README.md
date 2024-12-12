@@ -10,4 +10,7 @@ https://github.com/milanpatel9/ece-445-notebooks/blob/main/notebooks/kyle/IMG_10
 10-4-24
 Machine shop agreed with a lot of design ideas except you suggested doing wall power or soemthing like that. The design would still stay similar to the original picture but depending on the weight we might need to move the power source to the side of the machine. This is because it currently might make the machine fall over but I still suggested having it close to the pcb.
 
+10-8-24
+Had a meeting with the TA and professor yesderday about our design. I misunderstood the machine shop when he said we could do 12V from the wall outlet. This would require a circuit to go with it to step down multiple times to what we want. Professor recomeneded the power supply from our lab kit has a 12V and a 5V sources. Heat dissapation was also a big issue because stepping down from those voltages might cause problems. I will need to start looking at actual parts to do the stepping down soon.
+
 
