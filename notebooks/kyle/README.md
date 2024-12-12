@@ -49,7 +49,8 @@ Use a multimeter to measure the voltage across the 12V input and ground that is 
 Repeat the previous step but measure the voltage across the 5V input and ground that is being delivered to the microcontroller.
 Check individual sensors for each subsystem and ensure that they are receiving 3.3V across the output from the microcontroller and ground.
 
-11-11-24
+11-12-24
+I submitted our PCB for round 5, I changed how a few of the components are connected to the esp based on feedback from my teammates. Also added changed the footprint for the fuses to protect the overall circuit. Here is the uploaded picture of the PCB I worked on.
 
 
 
