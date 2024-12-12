@@ -34,6 +34,10 @@ We got part of the machine back from the shop, The motors being installed this t
 10-30-24
 I redesigned the power schematic to connect the 12V connection straight to the motors to fix our friction problem and then chnaged the LDO to a 12V to 3.3V component since we no longer needed 5V. I then transfered these changes onto the pcb editor. Digikey MIC5504-1.8YM5-TR should be able to handle the current going through it but I am still trying to find one that handles more.
 
+11-4-24
+I went to office hours to get some help on the power system design. I hadn't thought about how much strain was being put on the one 12V connector and how it could potentialy lead to errors down the road. Given that the power supply also has a 5V connection we decided to change the design so that the 12V connector only powers the motors. I also added a connector for the 5v which I then put through a 5V to 3.3V LDO which is less heat exchange then the previous design and only worries about powering the sesnors. I think this will be the power design we go with from this point forward. Here is the LDO I made on the PCB editor.
+
+
 
 
 
