@@ -13,4 +13,12 @@ Machine shop agreed with a lot of design ideas except you suggested doing wall p
 10-8-24
 Had a meeting with the TA and professor yesderday about our design. I misunderstood the machine shop when he said we could do 12V from the wall outlet. This would require a circuit to go with it to step down multiple times to what we want. Professor recomeneded the power supply from our lab kit has a 12V and a 5V sources. Heat dissapation was also a big issue because stepping down from those voltages might cause problems. I will need to start looking at actual parts to do the stepping down soon.
 
+10-11-24
+I found one LDO part that will step down the 12V to 5V and then I found another to step down the 5V to 3.3V. https://www.digikey.com/en/products/detail/shenzhen-slkormicro-semicon-co-ltd/AMS1117-3-3-SOT-223/21853079 AMS1117 does 5v to 3.3v. LD1117S50TR works for the 12V to 5V
+
+10-14-24
+It doesn't seem like we will make the first round of pcb orders because we are having a few errors in the PCB editor. Currently have only one storage compartnant worth of design done for the PCB so far but it would be enough to test some of the quesitons. We will look to fix the errors and get something ordered so we can test after next round.
+
+10-
+
 
