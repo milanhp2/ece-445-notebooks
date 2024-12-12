@@ -19,6 +19,13 @@ I found one LDO part that will step down the 12V to 5V and then I found another 
 10-14-24
 It doesn't seem like we will make the first round of pcb orders because we are having a few errors in the PCB editor. Currently have only one storage compartnant worth of design done for the PCB so far but it would be enough to test some of the quesitons. We will look to fix the errors and get something ordered so we can test after next round.
 
-10-
+10-18-24
+I worked on the PCB sechematic again today adding an LED light and a solderjumper so we can test and do some things manually on the pcb if needed. Read the datasheets for the sensors and some list themselves as 5V and others at 3.3V even though the ranges all say they can do both. Will need to do testing for this. It looks like digikey has both of the LDOs that I was considering.
+
+10-19-24
+I got the errors to go away on the PCB editor, had to learn how to use ground vias to hook up all the pin connections since we use the majority of ours on the ESP32. Still just have one of each component since we will just use this one for testing.
+
+10-21-24
+
 
 
