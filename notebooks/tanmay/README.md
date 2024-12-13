@@ -51,11 +51,7 @@ I resolved the school wifi connection issue by finding a youtube video of a prof
 The code was still not able to connect so I did a little more research and found that I needed to add a sort of certificate to get the microcontroller connected so I downloaded a certificate from a different microcontroller. The addition of that certificate removed some errors.
 But then I found out that the functions for from the michigan professor github are no longer supported so I googled online and found a replacement for these key functions and those functions are included below-
 
-esp_eap_client_set_ca_cert((uint8_t *)incommon_ca, strlen(incommon_ca) + 1);
-  esp_eap_client_set_identity((uint8_t *)EAP_IDENTITY, strlen(EAP_IDENTITY));
-  esp_eap_client_set_username((uint8_t *)EAP_IDENTITY, strlen(EAP_IDENTITY));
-  esp_eap_client_set_password((uint8_t *)EAP_PASSWORD, strlen(EAP_PASSWORD));
-
+![wifi_code](https://github.com/user-attachments/assets/3b7313b6-c3aa-4526-bc20-8793bb84bbd6)
 
 11-3-2024
 I worked on setting up the website. I set up a website using a react framework. Download all the dependencies required for the setup. Then I worked on adding buttons, playing around with various styles. Watched youtube videos to learn the basics of html, javascript, and css. 
@@ -80,14 +76,8 @@ Then I added this calibration factor to a function from the library and that fun
 11-9-2024
 Today I worked on soldering the load sensor attached to our machine. I also worked on correcting the clock speed code. It was really hard to find this answer as all the stackoverflow questions on this topic were a bit old so whenever I would try a suggested method I would get errors just to find out that that method is not supported by esp32 anymore. Then in the end I went to the official website and looked into the esp32 manual and found the clock speed section. I corrected the error by adding this code -
 
-rtc_cpu_freq_config_t config;
-  int current_freq = rtc_clk_cpu_freq_value(rtc_clk_cpu_freq_get());
 
-
-  rtc_clk_cpu_freq_get_config(&config);
-  rtc_clk_cpu_freq_mhz_to_config(80, &config);
-  rtc_clk_cpu_freq_set_config_fast(&config);
-  scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
+![load cell code](https://github.com/user-attachments/assets/b129b202-a28e-4dfd-b249-b3a4627dd8cf)
 
 This code worked by slowing down the clock to 80M hertz. I found that the original clock speed of the esp32 is too fast for the load sensor and that that was causing the inconsistencies. After this was done I added this code to our master sensor code and integrated it with the motor code. I used this website for the starter load sensor code.
 
@@ -119,72 +109,16 @@ I worked on setting up the HiLetgo FT232RL Mini USB to TTL Serial Converter Adap
 11-25-2024 and the whole week
 I worked on setting up the website. I wrote code to add a drop down menu on the app so that the user can see all the tea blend options when they want to choose one removing the need for them to type that in or have multiple buttons. The code for the dropdown menu is below-
 
-client.println(".dropdown-container {margin: 20px auto; width: 300px;}");
-            client.println("select {width: 100%; padding: 12px; font-size: 18px; border: 2px solid #4CAF50; border-radius: 5px; background-color: white; cursor: pointer;}");
-            client.println( "select:hover { border-color: #45a049;}");
-            client.println( "select:focus { outline: none; box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);}");
-            client.println("option { padding: 12px; font-size: 16px;}");
 
+![dropdown css](https://github.com/user-attachments/assets/1d78c620-c168-42a2-8e93-3c85790b494f)
 
-client.println("<div class=\"dropdown-container\">");
-              client.println("<form action='/select' method='get'>");
-              client.println("<select name=\"tea-options\" id=\"tea-options\">");
-              client.println("<option value=\"\" disabled selected>Select your tea preference</option>");
-              client.println("<option value=\"1g\">Light steep 1</option>");
-              client.println("<option value=\"2g\">Light steep 2</option>");
-              client.println("<option value=\"3g\">Medium steep 1</option>");
-              client.println("<option value=\"4g\">Medium steep 2</option>");
-              client.println("<option value=\"5g\">Dark steep 1</option>");
-              client.println("<option value=\"6g\">Dark steep 2</option>");
-              client.println("</select>");
-              client.println("<input type=\"submit\" value=\"Confirm Selection\" class=\"button\">");  // Add submit button
-              client.println("</form>");
-              client.println("</div>");
+![dropdown html](https://github.com/user-attachments/assets/08d2f4b7-fa25-491a-8766-af906db48b3f)
 
 
 Then I also wrote code to add a timer so that when the user dispenses tea into their cup a timer will automatically start. The stop time of the timer will depend on the type of tea blend and tea type selected. The code for the timer is included below-
 
-client.println("<script>");
-            client.println("let timerInterval;");
-            client.println("let timeLeft;");
-            client.println("let isRunning = false;");
-            client.println("function startTimer() {");
-            client.println("    if (!isRunning) {");
-            client.println("        isRunning = true;");
-            client.println("        const minutes = parseInt(document.getElementById('minutes').value) || 0;");
-            client.println("        const seconds = parseInt(document.getElementById('seconds').value) || 0;");
-            client.println("        timeLeft = minutes * 60 + seconds;");
-            client.println("        timerInterval = setInterval(function() {");
-            client.println("            if (timeLeft <= 0) {");
-            client.println("                clearInterval(timerInterval);");
-            client.println("                isRunning = false;");
-            client.println("                alert('Timer finished!');");
-            client.println("                return;");
-            client.println("            }");
-            client.println("            timeLeft--;");
-            client.println("            updateDisplay();");
-            client.println("        }, 1000);");
-            client.println("    }");
-            client.println("}");
-            client.println("function stopTimer() {");
-            client.println("    clearInterval(timerInterval);");
-            client.println("    isRunning = false;");
-            client.println("}");
-            client.println("function resetTimer() {");
-            client.println("    stopTimer();");
-            client.println("    const minutes = parseInt(document.getElementById('minutes').value) || 0;");
-            client.println("    const seconds = parseInt(document.getElementById('seconds').value) || 0;");
-            client.println("    timeLeft = minutes * 60 + seconds;");
-            client.println("    updateDisplay();");
-            client.println("}");
-            client.println("function updateDisplay() {");
-            client.println("    const minutes = Math.floor(timeLeft / 60);");
-            client.println("    const seconds = timeLeft % 60;");
-            client.println("    document.getElementById('timer').textContent = ");
-            client.println("        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;");
-            client.println("}");
-            client.println("resetTimer();");
-            client.println("</script>");
+![timer code](https://github.com/user-attachments/assets/8abc42bd-a0e0-44bf-9916-2dd9632a88d7)
+
 
 I also added buttons and other components. I worked on integrating the sensor code and the app code together so that the user inputs can be accessed in the code and used by the sensors or have the sensor's reading be displayed on the app.
 
