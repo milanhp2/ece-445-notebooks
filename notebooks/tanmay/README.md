@@ -1,3 +1,5 @@
+Tanmay Mittal
+
 9-30-2024: 
 Together as a team we worked on the design document. We also divided the work for the project between all the team members.
 
